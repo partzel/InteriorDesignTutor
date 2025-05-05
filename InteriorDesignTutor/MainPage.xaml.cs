@@ -137,15 +137,19 @@ namespace InteriorDecorTutor
                 CaptionLabel.Text = "Generating caption...";
 
                 // Simulate API throttling with a 3-second delay
-                await Task.Delay(3000);
+                await Task.Delay(2000);
 
                 // Placeholder for API call
-                /*
+                
                 using (var httpClient = new HttpClient())
                 {
                     var formData = new MultipartFormDataContent();
                     var imageStream = await _selectedImageFile.OpenReadAsync();
-                    formData.Add(new StreamContent(imageStream), "image", _selectedImageFile.FileName);
+
+                    var imageContent = new StreamContent(imageStream);
+                    imageContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/jpeg"); // Adjust based on file type
+                    formData.Add(imageContent, "image", _selectedImageFile.FileName);
+
                     if (!string.IsNullOrEmpty(LlmPromptEntry.Text))
                     {
                         formData.Add(new StringContent(LlmPromptEntry.Text), "prompt");
@@ -156,10 +160,6 @@ namespace InteriorDecorTutor
                     var caption = await response.Content.ReadAsStringAsync();
                     CaptionLabel.Text = caption;
                 }
-                */
-
-                // Mock caption
-                CaptionLabel.Text = $"Generated caption for image using URL: {imageGenerationUrl}";
             }
             catch (Exception ex)
             {

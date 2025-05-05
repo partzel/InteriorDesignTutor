@@ -3,59 +3,57 @@
              x:Class="InteriorDecorTutor.InstructionsPage"
              Title="How to Use">
 
-    <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="20">
+    <ScrollView HorizontalOptions="Center">
+        <VerticalStackLayout Padding="20" Spacing="20" MaximumWidthRequest="500">
             <Label Text="How to Use Interior Style Advisor"
                    FontSize="Large"
                    FontAttributes="Bold"
-                   HorizontalOptions="Center" />
+                   HorizontalOptions="Center"
+                   LineBreakMode="WordWrap" />
 
             <Label Text="Follow these simple steps to get personalized decor instructions:"
                    FontSize="Medium"
                    LineBreakMode="WordWrap" />
 
             <StackLayout Spacing="10">
-                <HorizontalStackLayout Spacing="10">
+                <HorizontalStackLayout Spacing="10" >
                     <Label Text="1."
-                           FontSize="Medium"
-                           FontAttributes="Bold" />
+                           FontAttributes="Bold" 
+                           LineBreakMode="WordWrap" />
                     <Label Text="Choose a photo from your gallery or take a new picture."
-                           FontSize="Medium"
                            LineBreakMode="WordWrap" />
                 </HorizontalStackLayout>
                 <Image Source="gallery_icon.png"
-                       HeightRequest="500"
-                       WidthRequest="500"
+                       HeightRequest="300"
+                       WidthRequest="300"
                        HorizontalOptions="Center" />
             </StackLayout>
 
             <StackLayout Spacing="10">
                 <HorizontalStackLayout Spacing="10">
                     <Label Text="2."
-                           FontSize="Medium"
-                           FontAttributes="Bold" />
+                           FontAttributes="Bold" 
+                           LineBreakMode="WordWrap" />
                     <Label Text="Wait for the AI to analyze your image and generate a caption."
-                           FontSize="Medium"
                            LineBreakMode="WordWrap" />
                 </HorizontalStackLayout>
                 <Image Source="loading_icon.png"
-                       HeightRequest="500"
-                       WidthRequest="500"
+                       HeightRequest="300"
+                       WidthRequest="300"
                        HorizontalOptions="Center" />
             </StackLayout>
 
             <StackLayout Spacing="10">
                 <HorizontalStackLayout Spacing="10">
                     <Label Text="3."
-                           FontSize="Medium"
-                           FontAttributes="Bold" />
+                           FontAttributes="Bold" 
+                           LineBreakMode="WordWrap" />
                     <Label Text="Enjoy your personalized decor instructions!"
-                           FontSize="Medium"
                            LineBreakMode="WordWrap" />
                 </HorizontalStackLayout>
                 <Image Source="decor_icon.png"
-                       HeightRequest="500"
-                       WidthRequest="500"
+                       HeightRequest="300"
+                       WidthRequest="300"
                        HorizontalOptions="Center" />
             </StackLayout>
 

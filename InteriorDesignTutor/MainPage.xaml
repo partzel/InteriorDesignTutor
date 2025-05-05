@@ -5,24 +5,27 @@
 
     <Grid>
         <!-- Main Content -->
-        <VerticalStackLayout Padding="20" Spacing="20">
-            <Image x:Name="SelectedImage"
-                   HeightRequest="250"
-                   Aspect="AspectFit"
-                   BackgroundColor="LightGray" />
+        <ScrollView Padding="20">
+            <VerticalStackLayout Spacing="20">
+                <Image x:Name="SelectedImage"
+                       HeightRequest="250"
+                       Aspect="AspectFit"
+                       BackgroundColor="LightGray" />
 
-            <Entry x:Name="LlmPromptEntry" Placeholder="Optional prompt..." />
+                <Entry x:Name="LlmPromptEntry" Placeholder="Optional prompt..." />
 
-            <Button Text="Load Image from Gallery" Clicked="OnLoadImageClicked" />
-            <Button Text="Take Photo with Camera" Clicked="OnTakePhotoClicked" />
+                <Button Text="Load Image from Gallery" Clicked="OnLoadImageClicked" />
+                <Button Text="Take Photo with Camera" Clicked="OnTakePhotoClicked" />
 
-            <Button x:Name="GenerateCaptionButton" Text="Generate Caption" Clicked="OnGenerateCaptionClicked" IsEnabled="False" />
+                <Button x:Name="GenerateCaptionButton" Text="Generate Caption" Clicked="OnGenerateCaptionClicked" IsEnabled="False" />
 
-            <Label x:Name="CaptionLabel"
-                   Text="Caption will appear here"
-                   FontAttributes="Italic"
-                   LineBreakMode="WordWrap" />
-        </VerticalStackLayout>
+                <Label x:Name="CaptionLabel"
+                       Text="Caption will appear here"
+                       FontAttributes="Italic"
+                       LineBreakMode="WordWrap" >
+                </Label>
+            </VerticalStackLayout>
+        </ScrollView>
 
         <!-- Loading Overlay -->
         <Grid x:Name="LoadingOverlay" BackgroundColor="#80000000" IsVisible="False">
