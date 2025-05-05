@@ -4,19 +4,19 @@ using Microsoft.Maui.Storage;
 using System;
 using System.Threading.Tasks;
 using CommunityToolkit.Maui.Core;
-// using Plugin.Maui.Audio;
+using Plugin.Maui.Audio;
 
 namespace InteriorDecorTutor
 {
     public partial class MainPage : ContentPage
     {
         private FileResult? _selectedImageFile;
-        // private readonly IAudioManager _audioManager;
+        private readonly IAudioManager _audioManager;
 
-        public MainPage()//IAudioManager audioManager)
+        public MainPage(IAudioManager audioManager)
         {
             InitializeComponent();
-            // _audioManager = audioManager;
+            _audioManager = audioManager;
         }
 
         private async void OnLoadImageClicked(object sender, EventArgs e)
@@ -168,7 +168,7 @@ namespace InteriorDecorTutor
             }
             finally
             {
-                /*// Play blip sound
+                // Play blip sound
                 try
                 {
                     var player = _audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("blip.wav"));
@@ -178,7 +178,7 @@ namespace InteriorDecorTutor
                 {
                     // Silently handle audio errors to avoid disrupting the UI
                     Console.WriteLine($"Failed to play blip sound: {ex.Message}");
-                } */
+                }
 
                 // Hide loading overlay and reset animations
                 LoadingOverlay.IsVisible = false;

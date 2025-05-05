@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using CommunityToolkit.Maui;
+using Plugin.Maui.Audio;
 
 namespace InteriorDesignTutor
 {
@@ -19,7 +20,7 @@ namespace InteriorDesignTutor
                 });
 
             // Register IAudioManager
-            // builder.Services.AddSingleton(AudioManager.Current);
+            builder.Services.AddSingleton(AudioManager.Current);
 
             return builder.Build();
         }
