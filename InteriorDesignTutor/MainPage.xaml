@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InteriorDecorTutor.MainPage">
+
+    <Grid>
+        <!-- Main Content -->
+        <VerticalStackLayout Padding="20" Spacing="20">
+            <Image x:Name="SelectedImage"
+                   HeightRequest="250"
+                   Aspect="AspectFit"
+                   BackgroundColor="LightGray" />
+
+            <Entry x:Name="LlmPromptEntry" Placeholder="Optional prompt..." />
+
+            <Button Text="Load Image from Gallery" Clicked="OnLoadImageClicked" />
+            <Button Text="Take Photo with Camera" Clicked="OnTakePhotoClicked" />
+
+            <Button x:Name="GenerateCaptionButton" Text="Generate Caption" Clicked="OnGenerateCaptionClicked" IsEnabled="False" />
+
+            <Label x:Name="CaptionLabel"
+                   Text="Caption will appear here"
+                   FontAttributes="Italic"
+                   LineBreakMode="WordWrap" />
+        </VerticalStackLayout>
+
+        <!-- Loading Overlay -->
+        <Grid x:Name="LoadingOverlay" BackgroundColor="#80000000" IsVisible="False">
+            <!-- Semi-transparent black background -->
+            <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
+                <!-- Loading Indicator (Spinning Circle) -->
+                <ActivityIndicator Color="White" IsRunning="{Binding IsVisible, Source={x:Reference LoadingOverlay}}" />
+                <Label Text="Generating~~Generating Caption..." TextColor="White" FontAttributes="Bold" />
+            </VerticalStackLayout>
+
+            <!-- Furniture Pieces for Animation -->
+            <Image x:Name="LampImage" Source="lamp.png" WidthRequest="100" HeightRequest="100" IsVisible="False" />
+            <Image x:Name="PillowImage" Source="pillow.png" WidthRequest="100" HeightRequest="100" IsVisible="False" />
+        </Grid>
+    </Grid>
+</ContentPage>

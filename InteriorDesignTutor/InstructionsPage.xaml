@@ -1,0 +1,68 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InteriorDecorTutor.InstructionsPage"
+             Title="How to Use">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+            <Label Text="How to Use Interior Style Advisor"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Follow these simple steps to get personalized decor instructions:"
+                   FontSize="Medium"
+                   LineBreakMode="WordWrap" />
+
+            <StackLayout Spacing="10">
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="1."
+                           FontSize="Medium"
+                           FontAttributes="Bold" />
+                    <Label Text="Choose a photo from your gallery or take a new picture."
+                           FontSize="Medium"
+                           LineBreakMode="WordWrap" />
+                </HorizontalStackLayout>
+                <Image Source="gallery_icon.png"
+                       HeightRequest="500"
+                       WidthRequest="500"
+                       HorizontalOptions="Center" />
+            </StackLayout>
+
+            <StackLayout Spacing="10">
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="2."
+                           FontSize="Medium"
+                           FontAttributes="Bold" />
+                    <Label Text="Wait for the AI to analyze your image and generate a caption."
+                           FontSize="Medium"
+                           LineBreakMode="WordWrap" />
+                </HorizontalStackLayout>
+                <Image Source="loading_icon.png"
+                       HeightRequest="500"
+                       WidthRequest="500"
+                       HorizontalOptions="Center" />
+            </StackLayout>
+
+            <StackLayout Spacing="10">
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="3."
+                           FontSize="Medium"
+                           FontAttributes="Bold" />
+                    <Label Text="Enjoy your personalized decor instructions!"
+                           FontSize="Medium"
+                           LineBreakMode="WordWrap" />
+                </HorizontalStackLayout>
+                <Image Source="decor_icon.png"
+                       HeightRequest="500"
+                       WidthRequest="500"
+                       HorizontalOptions="Center" />
+            </StackLayout>
+
+            <Button Text="Get Started"
+                    Clicked="OnGetStartedClicked"
+                    HorizontalOptions="Center"
+                    WidthRequest="200" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

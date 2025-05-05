@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="InteriorDesignTutor.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:InteriorDecorTutor"
+    Shell.FlyoutBehavior="Flyout"
+    Title="InteriorDesignTutor">
+
+    <FlyoutItem Title="Home" Route="MainPage">
+        <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Instructions" Route="InstructionsPage">
+        <ShellContent
+        Title="Instructions"
+        ContentTemplate="{DataTemplate local:InstructionsPage}"
+        Route="InstructionsPage" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Settings" Route="SettingsPage">
+        <ShellContent
+        Title="Settings"
+        ContentTemplate="{DataTemplate local:SettingsPage}"
+        Route="SettingsPage" />
+    </FlyoutItem>
+
+</Shell>

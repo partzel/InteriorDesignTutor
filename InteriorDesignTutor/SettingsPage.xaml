@@ -1,0 +1,26 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InteriorDecorTutor.SettingsPage"
+             Title="Settings">
+
+	<VerticalStackLayout Padding="20" Spacing="20">
+		<Label Text="Image Generation URL"
+               FontSize="Title"
+               FontAttributes="Bold" />
+
+		<Entry x:Name="UrlEntry"
+               Placeholder="Enter URL for image generation API"
+               Text="{Binding ImageGenerationUrl}"
+               Keyboard="Url" />
+
+		<Button Text="Save"
+                Clicked="OnSaveClicked"
+                HorizontalOptions="Center"
+                WidthRequest="200" />
+
+		<Label Text="Enter the endpoint URL for the image generation service. Ensure it is a valid URL."
+               FontSize="Caption"
+               TextColor="Gray"
+               LineBreakMode="WordWrap" />
+	</VerticalStackLayout>
+</ContentPage>
